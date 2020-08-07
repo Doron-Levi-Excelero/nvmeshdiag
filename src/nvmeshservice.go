@@ -11,7 +11,7 @@ func checkNvmeshInstalled() []string {
 
 	var slcNvmeshService []string
 	var strPackageQuery string
-	r := regexp.MustCompile(`(?i)(nvmesh\-[a-z]*\-\d*\.\d*\.\d*\-\d*)`)
+	r := regexp.MustCompile(`(?i)(nvmesh\-[a-z]*\-[\d*\.]*\d*-\d*)`)
 
 	if checkExecutableExists("apt") {
 		strPackageQuery, _ = runCommand(strings.Fields("apt list --installed"))
